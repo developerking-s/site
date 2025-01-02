@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta name="description" content="Portfólio do King. Veja mais Sobre!">
-  <meta name="keywords" content="king, developer, developer_king, website do king, website king">
-  <meta name="author" content="Website do King">
-  <meta name="theme-color" content="#9506f2">
-<meta name="thumbnail" content="https://cdn.discordapp.com/avatars/1159667835761594449/c01980b4f1c71e12bb6ce8af2106b3a9.png?size=2048">
-  <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio do King</title>
-    <link rel="stylesheet" href="style.css">
+    <title>King</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7d2b6; /* Cor de fundo pastel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #fff;
+            animation: bounce 2s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #fff;
+            animation: fadeIn 3s forwards;
+            opacity: 0;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #f7d2a6;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: scaleUp 0.5s ease-in-out forwards;
+        }
+
+        .button:hover {
+            background-color: #f7d2b6;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bem-Vindo(a) ao Meu Portfólio!</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#portfolio">Trabalhos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou King(Renato), um programador de JavaScript e Python. Sou apaixonado por criar soluções inovadoras e impactantes.</p>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Trabalhos Recentes</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://cdn.discordapp.com/banners/1212115074735415316/1133adc82b58e03b12a9e9c51b68f991.png?size=512" alt="Projeto 1">
-                    <h3>Bot de Discord</h3>
-                    <p>O Sam Bot é um bot multifuncional que está em mais de 500 servidores.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://cdn.discordapp.com/attachments/1314589171679232010/1324184219462799512/Picsart_25-01-02_01-13-51-564.jpg?ex=67773a28&is=6775e8a8&hm=b52b668b1f256a9edfb1e8b59c225ee909b8bd6ca7966020f70dc686db48ec26&" alt="Projeto 2">
-                    <h3>Site de Calculadora</h3>
-                    <p>É um site simples para calcular contas.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="" alt="Projeto 3">
-                    <h3>Breve</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Entre em contato através do email: <a href="mailto:renafernandesjorge11@gmail.com">renafernandesjorge11@gmail.com</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 King. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <div class="container">
+        <h1>👋 Olá sou o RJ! Sou Programador</h1>
+        <p>É um prazer te conhecer o meu nome é Renato sou um criador de bots e programar adoro programação 🤍.</p>
+        <button class="button">Em Desenvolvimento</button>
+    </div>
 </body>
-                      </html>
-  
+</html>
 
-                                                                                                                     </html>
 
 
   
