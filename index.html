@@ -6,83 +6,111 @@
     <title>King</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7d2b6; /* Cor de fundo pastel */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            overflow-x: hidden;
         }
-
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #fff;
-            animation: bounce 2s infinite;
-        }
-
-        p {
-            font-size: 1.5em;
-            color: #fff;
-            animation: fadeIn 3s forwards;
-            opacity: 0;
-        }
-
-        .button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2em;
+        
+        header {
+            background: linear-gradient(135deg, #000000, #0000);
             color: white;
-            background-color: #f7d2a6;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            animation: scaleUp 0.5s ease-in-out forwards;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
         }
-
-        .button:hover {
-            background-color: #f7d2b6;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+        
+        header h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
         }
 
         @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        @keyframes scaleUp {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 1rem;
+            animation: slideIn 2s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
         }
 
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>👋 Olá sou o RJ! Sou Programador</h1>
-        <p>É um prazer te conhecer o meu nome é Renato sou um criador de bots e programar adoro programação 🤍.</p>
-        <button class="button">Em Desenvolvimento</button>
+
+<header>
+    <h1>👋 Hi , I'm King! Developer and Front End </h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>💻 Tech Stack:</h2>
+        <p>Html & Css , Java & JavaScript , Python & Php , Vercel , Netlify , Git & GitHub , Canva , Npm & Node.Js</p>
     </div>
+    <div class="card">
+        <h2>🎮 History</h2>
+        <p>Hi my name is Renato my a developer and front end i start in end of 2023. I have a 13 years old.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 King. Todos os direitos reservados.</p>
+</footer>
+
 </body>
 </html>
 
