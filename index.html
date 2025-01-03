@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta property="og:title" content="King's Website">
-    <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
+    <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer, student & designer.">
     <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,43 +34,46 @@
         header h1 {
             margin-top: 20px;
             font-size: 2.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            animation: typing 3.5s steps(40, end), blink 0.7s step-end infinite;
         }
 
-        /* Menu Estilizado */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from { border-color: transparent; }
+            to { border-color: white; }
+        }
+
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.9);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            gap: 20px;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.8);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
+        nav a {
             color: white;
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        nav ul li a:hover {
+        nav a:hover {
             background-color: white;
             color: black;
+            border-color: white;
+            border-radius: 5px;
         }
 
         .image-section {
@@ -125,12 +128,9 @@
 
     <!-- Menu -->
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Image Section -->
@@ -175,6 +175,7 @@
     </footer>
 </body>
 </html>
+
  
 
 
