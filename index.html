@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta property="og:title" content="King's Website">
-    <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer, student & designer.">
+    <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
     <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,11 +33,12 @@
 
         header h1 {
             margin-top: 20px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid white;
-            animation: typing 3.5s steps(40, end), blink 0.7s step-end infinite;
+            animation: typing 3.5s steps(30, end), blink 0.7s step-end infinite;
+            max-width: 100%;
         }
 
         @keyframes typing {
@@ -51,41 +52,32 @@
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             z-index: 1000;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: white;
-            color: black;
-            border-color: white;
-            border-radius: 5px;
+            color: #00ffcc;
         }
 
-        .image-section {
+        section {
+            margin: 60px 20px;
             text-align: center;
-            margin: 40px 0;
-        }
-
-        .image-section img {
-            width: 80%;
-            max-width: 600px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .container {
@@ -93,7 +85,7 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            margin: 40px 20px;
+            margin-top: 20px;
         }
 
         .card {
@@ -101,7 +93,7 @@
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            width: 320px;
+            width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -123,46 +115,52 @@
     <!-- Header -->
     <header>
         <img class="profile-pic" src="https://via.placeholder.com/120" alt="Profile Picture">
-        <h1>Hi, I'm King! 
-Developer and Designer</h1>
+        <h1>👋 Hi, I'm King! Developer and Front-End</h1>
     </header>
 
-    <!-- Menu -->
+    <!-- Floating Menu -->
     <nav>
-        <a href="#about">About Me</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
+
     <!-- About Section -->
-    <div class="container" id="about">
-        <div class="card">
-            <h2>💻 Tech Stack</h2>
-            <p>HTML & CSS, Java & JavaScript, Python & PHP, Vercel, Netlify, Git & GitHub, Canva, NPM & Node.js</p>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="container">
+            <div class="card">
+                <h3>💻 Tech Stack</h3>
+                <p>HTML & CSS, Java & JavaScript, Python & PHP, Vercel, Netlify, Git & GitHub, Canva, NPM & Node.js</p>
+            </div>
+            <div class="card">
+                <h3>🎮 History</h3>
+                <p>Hello, my name is Renato. I am a developer and front-end enthusiast. I started at the end of 2023 and I am 13 years old.</p>
+            </div>
         </div>
-        <div class="card">
-            <h2>🎮 History</h2>
-            <p>Hello, my name is Renato. I am a developer and front-end enthusiast. I started at the end of 2023 and I am 13 years old.</p>
-        </div>
-    </div>
+    </section>
 
     <!-- Projects Section -->
-    <div class="container" id="projects">
-        <div class="card">
-            <h3>Sam Bot</h3>
-            <p>Sam Bot is your all-in-one assistant for Discord! From moderation to fun features.</p>
-            <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Sam Bot</h3>
+                <p>Sam Bot is your all-in-one assistant for Discord! From moderation to fun features.</p>
+                <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Magic Site</h3>
+                <p>Magic Bot offers a variety of features for dynamic and interactive Discord servers.</p>
+                <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
+            </div>
+            <div class="card">
+                <h3>BotList Site</h3>
+                <p>Night BotList is one of the best bot lists for Discord.</p>
+                <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>Magic Site</h3>
-            <p>Magic Bot offers a variety of features for dynamic and interactive Discord servers.</p>
-            <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
-        </div>
-        <div class="card">
-            <h3>BotList Site</h3>
-            <p>Night BotList is one of the best bot lists for Discord.</p>
-            <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -170,9 +168,3 @@ Developer and Designer</h1>
     </footer>
 </body>
 </html>
-
- 
-
-
-  
- 
