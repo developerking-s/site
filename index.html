@@ -3,7 +3,6 @@
 <head>
     <meta property="og:title" content="King's Website">
     <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer, student & designer.">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1314589171679232010/1324580132496867408/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=677953a1&is=67780221&hm=e6554084d533bb15360b024bb4baf40fb4087205c51f498bc8300fa40eb2a15c&">
     <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,186 +13,134 @@
             margin: 0;
             padding: 0;
             background-color: #0f0f0f;
-            overflow-x: hidden;
             color: #fff;
-            transition: background-color 0.5s ease, color 0.5s ease;
+            overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(135deg, #000000, #111);
-            color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f0f0f, #111);
+            position: relative;
+        }
+
+        header .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin: 0 auto;
+            display: block;
         }
 
         header h1 {
-            font-size: 3rem;
-            animation: fadeIn 2s ease-in-out;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid white;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from { border-color: transparent }
+            to { border-color: white }
         }
 
         .menu {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
             z-index: 100;
         }
 
-        .menu button, .menu a {
-            background: none;
-            border: 1px solid #fff;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
+        .menu a {
+            color: white;
             text-decoration: none;
-            cursor: pointer;
-            transition: background 0.3s ease, color 0.3s ease;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .menu button:hover, .menu a:hover {
-            background: #fff;
-            color: #000;
+        .menu a:hover {
+            background-color: white;
+            color: black;
+            border-color: white;
+            border-radius: 5px;
+        }
+
+        .image-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .image-section img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            gap: 20px;
             flex-wrap: wrap;
-            animation: fadeIn 1.5s ease-in-out;
         }
 
         .card {
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            width: 320px;
-            padding: 25px;
-            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        .projects {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .project-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            width: 280px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-            text-align: center;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #111;
-        }
-
-        .image-section {
-            text-align: center;
-            padding: 40px;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        .image-section img {
-            max-width: 80%;  /* Enlarge the image */
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-section {
-            text-align: center;
-            padding: 40px;
-            background-color: #222;
-            color: #fff;
-        }
-
-        .contact-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .contact-section input, .contact-section textarea {
-            width: 80%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #fff;
-            background-color: #333;
-            color: #fff;
-            font-size: 16px;
-        }
-
-        .contact-section button {
-            padding: 10px 20px;
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .contact-section button:hover {
-            background-color: #000;
+            background: #111;
             color: #fff;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
+        <img class="profile-pic" src="https://via.placeholder.com/120" alt="Profile Picture">
         <h1>👋 Hi, I'm King! Developer and Front-End</h1>
     </header>
 
-    <!-- Floating Menu -->
-    <div class="menu">
-        <button id="toggleTheme">Toggle Theme</button>
+    <!-- Menu -->
+    <nav class="menu">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </div>
+    </nav>
 
-    <!-- Image -->
+    <!-- Image Section -->
     <div class="image-section">
-        <img src="https://cdn.discordapp.com/attachments/1223648039835795494/1324619239063289909/Copia_de_Copia_de_Mirely_20240814_160943_0000.png?ex=6778cf4c&is=67777dcc&hm=4741f06b17e1b120498f3fd2d0dd723c705a69378703f84918653e83e9a1eab1&" alt="Image of King">
+        <img src="https://via.placeholder.com/600" alt="Showcase Image">
     </div>
 
+    <!-- About Section -->
     <div class="container" id="about">
         <div class="card">
             <h2>💻 Tech Stack:</h2>
@@ -205,51 +152,28 @@
         </div>
     </div>
 
-    <!-- Projects -->
-    <div class="projects" id="projects">
-        <div class="project-card">
-            <h3>Sam Bot - Discord Bot</h3>
-            <p>Sam Bot is your all-in-one assistant for Discord! It has commands from moderation to fun features, such as organizing events and playing mini-games with members.</p>
+    <!-- Projects Section -->
+    <div class="container" id="projects">
+        <div class="card">
+            <h3>Sam Bot</h3>
+            <p>Sam Bot is your all-in-one assistant for Discord! From moderation to fun features.</p>
             <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
         </div>
-        <div class="project-card">
-            <h3>Magic Site - Discord Bot</h3>
-            <p>Magic Bot offers a variety of features, including innovative systems and fun tools for Discord servers.</p>
+        <div class="card">
+            <h3>Magic Site</h3>
+            <p>Magic Bot offers a variety of features for dynamic and interactive Discord servers.</p>
             <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
         </div>
-        <div class="project-card">
+        <div class="card">
             <h3>BotList Site</h3>
-            <p>Night BotList is one of the best bot lists for Discord, with everything you need to manage bots.</p>
+            <p>Night BotList is one of the best bot lists for Discord.</p>
             <a href="#" style="color: #fff; text-decoration: none;">View Project</a>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="contact-section" id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 King. All rights reserved.</p>
     </footer>
-
-    <script>
-        const toggleThemeButton = document.getElementById('toggleTheme');
-        toggleThemeButton.addEventListener('click', () => {
-            if (document.body.style.backgroundColor === 'white') {
-                document.body.style.backgroundColor = '#0f0f0f';
-                document.body.style.color = '#fff';
-            } else {
-                document.body.style.backgroundColor = 'white';
-                document.body.style.color = '#000';
-            }
-        });
-    </script>
 </body>
 </html>
