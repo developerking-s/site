@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta property="og:title" content="Site do King">
-    <meta property="og:description" content="Veja o meu Portfólio! Saiba mais Sobre Mim! Sou o King developer , estudante & designer.">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1314589171679232010/1324580132496867408/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6778aae1&is=67775961&hm=0725364a89251a8ee56c125bbef0e76b66d431e3a44ee3dbb63bf4512579f945&">
-    <meta name="theme-color" content="#000000">  
+    <meta property="og:description" content="Veja o meu Portfólio! Saiba mais Sobre Mim! Sou o King developer, estudante & designer.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1314589171679232010/1324580132496867408/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg">
+    <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer_King</title>
@@ -16,6 +16,7 @@
             background-color: #0f0f0f;
             overflow-x: hidden;
             color: #fff;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         header {
@@ -23,8 +24,6 @@
             color: white;
             text-align: center;
             padding: 80px 20px;
-            position: relative;
-            z-index: 10;
         }
 
         header h1 {
@@ -37,17 +36,41 @@
             100% { opacity: 1; }
         }
 
+        .menu {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .menu button, .menu a {
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu button:hover, .menu a:hover {
+            background: #fff;
+            color: #000;
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            animation: slideUp 1.5s ease-out;
-        }
-
-        @keyframes slideUp {
-            0% { transform: translateY(50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
         }
 
         .card {
@@ -58,7 +81,6 @@
             padding: 25px;
             margin: 20px;
             text-align: center;
-            transform: scale(1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             backdrop-filter: blur(10px);
         }
@@ -68,100 +90,24 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
 
-        .card h2 {
-            font-size: 1.5rem;
-            color: #fff;
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: #ddd;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
             background-color: #111;
-            color: white;
-            position: relative;
-            z-index: 10;
-        }
-
-        footer p {
-            font-size: 1rem;
-            animation: slideIn 2s ease-out;
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Fundo animado com quadrados */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: repeat(10, 1fr);
-        }
-
-        .background div {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.3);
-            animation: moveSquares 6s infinite ease-in-out, colorChange 4s infinite alternate;
-        }
-
-        @keyframes moveSquares {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(50px, 50px);
-            }
-            50% {
-                transform: translate(100px, 0);
-            }
-            75% {
-                transform: translate(50px, -50px);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
-        @keyframes colorChange {
-            0% {
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            50% {
-                background-color: rgba(0, 255, 255, 0.5);
-            }
-            100% {
-                background-color: rgba(255, 0, 255, 0.5);
-            }
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 2rem;
-            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-<header>
-   <h1>👋 Hi , I'm King! Developer and Front End</h1>
+    <header>
+        <h1>👋 Hi, I'm King! Developer and Front-End</h1>
     </header>
+
+    <!-- Menu Flutuante -->
+    <div class="menu">
+        <button id="toggleTheme">Alternar Tema</button>
+        <a href="#home">Página Inicial</a>
+        <a href="#about">Sobre Mim</a>
+    </div>
 
     <div class="container">
         <div class="card">
@@ -169,9 +115,8 @@
             <p>Html & Css, Java & JavaScript, Python & Php, Vercel, Netlify, Git & GitHub, Canva, Npm & Node.Js</p>
         </div>
         <div class="card">
-            <h2>🎮 History</h2>
-            <p>Hi, my name is Renato. I'm a developer and front-end enthusiast. I started in late 2023, and I am 13 y
-ears old.</p>
+            <h2>🎮 História</h2>
+            <p>Olá, meu nome é Renato. Sou desenvolvedor e entusiasta de front-end. Comecei no final de 2023 e tenho 13 anos.</p>
         </div>
     </div>
 
@@ -179,8 +124,21 @@ ears old.</p>
         <p>&copy; 2025 King. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        const toggleThemeButton = document.getElementById('toggleTheme');
+        toggleThemeButton.addEventListener('click', () => {
+            if (document.body.style.backgroundColor === 'white') {
+                document.body.style.backgroundColor = '#0f0f0f';
+                document.body.style.color = '#fff';
+            } else {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = '#000';
+            }
+        });
+    </script>
 </body>
 </html>
+
 
 
   
