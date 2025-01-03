@@ -103,7 +103,8 @@
         }
 
         .image-section img {
-            max-width: 80%;
+            max-width: 90%;  /* Aumentando o tamanho da imagem */
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
@@ -129,6 +130,45 @@
         .project-card:hover {
             transform: scale(1.05);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .contact-section input, .contact-section textarea {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact-section button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-section button:hover {
+            background-color: #000;
+            color: #fff;
         }
 
     </style>
@@ -160,27 +200,35 @@
             <p>Olá, meu nome é Renato. Sou desenvolvedor e entusiasta de front-end. Comecei no final de 2023 e tenho 13 anos.</p>
         </div>
     </div>
-<!-- Projetos -->
+
+    <!-- Projetos -->
     <div class="projects">
         <div class="project-card">
             <h3>Sam Bot - Bot Discord</h3>
             <p>O Sam Bot é o seu assistente completo para o Discord! Com ele, você tem acesso a uma variedade de comandos úteis, desde moderação para manter o servidor seguro, até funções de diversão para animar as conversas. Ele pode ajudar a organizar eventos, fornecer informações rápidas e até mesmo jogar minigames com os membros. Simples de usar e cheio de recursos, o Sam Bot torna seu servidor mais dinâmico e interativo..</p>
             <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
- 
-       
-</div>
+        </div>
         <div class="project-card">
             <h3>Site Magic - Discord Bot</h3>
             <p>Mais que um simples bot do Discord. O Magic é um bot multifuncional com vários sistemas inovadores e divertido. Adicione o Magic no seu servidor agora clicando no botão abaixo..</p>
             <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
-
-        
-</div>
+        </div>
         <div class="project-card">
             <h3>Site de BotList</h3>
             <p>A Night BotList é uma das melhores botlist do discord tem desde tudo</p>
             <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
         </div>
+    </div>
+
+    <!-- Seção de Contato -->
+    <div class="contact-section" id="contact">
+        <h2>Entre em Contato</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
     <footer>
@@ -201,9 +249,6 @@
     </script>
 </body>
 </html>
-
- 
- 
 
 
 
