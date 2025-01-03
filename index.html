@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta property="og:title" content="Site do King">
@@ -71,6 +71,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            flex-wrap: wrap;
         }
 
         .card {
@@ -95,6 +96,41 @@
             padding: 20px;
             background-color: #111;
         }
+
+        .image-section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .image-section img {
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
     </style>
 </head>
 <body>
@@ -109,6 +145,11 @@
         <a href="#about">Sobre Mim</a>
     </div>
 
+    <!-- Imagem -->
+    <div class="image-section">
+        <img src="https://cdn.discordapp.com/attachments/1314589171679232010/1324580132496867408/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="Imagem de King">
+    </div>
+
     <div class="container">
         <div class="card">
             <h2>💻 Tech Stack:</h2>
@@ -117,6 +158,25 @@
         <div class="card">
             <h2>🎮 História</h2>
             <p>Olá, meu nome é Renato. Sou desenvolvedor e entusiasta de front-end. Comecei no final de 2023 e tenho 13 anos.</p>
+        </div>
+    </div>
+
+    <!-- Projetos -->
+    <div class="projects">
+        <div class="project-card">
+            <h3>Projeto 1</h3>
+            <p>Descrição do projeto 1.</p>
+            <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 2</h3>
+            <p>Descrição do projeto 2.</p>
+            <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 3</h3>
+            <p>Descrição do projeto 3.</p>
+            <a href="#" style="color: #fff; text-decoration: none;">Ver Projeto</a>
         </div>
     </div>
 
@@ -138,6 +198,9 @@
     </script>
 </body>
 </html>
+
+ 
+ 
 
 
 
