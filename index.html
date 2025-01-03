@@ -97,23 +97,54 @@
             100% { transform: translateX(0); }
         }
 
-        /* Fundo animado */
+        /* Fundo animado com quadrados */
         .background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000;
-            animation: fundoAnimado 15s infinite alternate;
             z-index: -1;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
         }
 
-        /* Animação do fundo */
-        @keyframes fundoAnimado {
-            0% { background: #000; }
-            50% { background: #222; }
-            100% { background: #000; }
+        .background div {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            animation: moveSquares 6s infinite ease-in-out, colorChange 4s infinite alternate;
+        }
+
+        @keyframes moveSquares {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(50px, 50px);
+            }
+            50% {
+                transform: translate(100px, 0);
+            }
+            75% {
+                transform: translate(50px, -50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                background-color: rgba(0, 255, 255, 0.5);
+            }
+            100% {
+                background-color: rgba(255, 0, 255, 0.5);
+            }
         }
 
         .content {
@@ -129,9 +160,22 @@
 </head>
 <body>
 
-    <div class="background"></div>
+    <div class="background">
+        <!-- Criando os quadrados dentro do grid -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     <div class="content">
-        Fundo animado preto
+        Fundo animado com quadrados
     </div>
 
     <header>
@@ -145,7 +189,8 @@
         </div>
         <div class="card">
             <h2>🎮 History</h2>
-            <p>Hi, my name is Renato. I'm a developer and front-end enthusiast. I started in late 2023, and I am 13 years old.</p>
+            <p>Hi, my name is Renato. I'm a developer and front-end enthusiast. I started in late 2023, and I am 13 y
+ears old.</p>
         </div>
     </div>
 
@@ -155,6 +200,7 @@
 
 </body>
 </html>
+
 
 
    
