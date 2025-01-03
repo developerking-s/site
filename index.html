@@ -91,6 +91,57 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(0); }
         }
+        /* Define o estilo básico do corpo */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Fundo animado */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            animation: fundoAnimado 10s infinite alternate;
+        }
+
+        /* Animação para o fundo */
+        @keyframes fundoAnimado {
+            0% {
+                background: #000;
+            }
+            50% {
+                background: #333;
+            }
+            100% {
+                background: #000;
+            }
+        }
+
+        /* Texto exemplo */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        Fundo animado preto
+    </div>
+</body>
+</html>
 
     </style>
 </head>
