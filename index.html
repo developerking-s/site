@@ -3,9 +3,9 @@
 <head>
     <meta property="og:title" content="King's Website">
     <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
-     <meta property="og:image" content="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6779aab9&is=67785939&hm=6a03455f90d0014056c0eea03847daa9c7bc877d84f996bfbc1816ee0d0a58ba&">
-<meta name="theme-color" content="#000000"> 
-<meta charset="UTF-8">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6779aab9&is=67785939&hm=6a03455f90d0014056c0eea03847daa9c7bc877d84f996bfbc1816ee0d0a58ba&">
+    <meta name="theme-color" content="#000000"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King</title>
     <!-- Link para Font Awesome -->
@@ -71,17 +71,25 @@
             cursor: pointer;
             border-radius: 8px;
             transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .btn:hover {
             background-color: #00cc99;
         }
 
+        /* Ícones nos botões */
+        .btn i {
+            font-size: 18px;
+        }
+
         nav {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: #000;
             padding: 10px 15px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -150,8 +158,12 @@
         <h1>Hi, I'm King! Front-End</h1>
         <!-- Botões -->
         <div class="button-container">
-            <button class="btn">Discord</button>
-            <button class="btn">Github</button>
+            <button class="btn">
+                <i class="fab fa-discord"></i> Discord
+            </button>
+            <button class="btn">
+                <i class="fab fa-github"></i> Github
+            </button>
         </div>
     </header>
 
@@ -212,8 +224,4 @@
         <p>&copy; 2025 King. All rights reserved.</p>
     </footer>
 </body>
-</html
-
-  
-       
-    
+</html>
