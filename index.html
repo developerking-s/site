@@ -3,12 +3,11 @@
 <head>
     <meta property="og:title" content="King's Website">
     <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
-     <meta property="og:image" content="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6779aab9&is=67785939&hm=6a03455f90d0014056c0eea03847daa9c7bc877d84f996bfbc1816ee0d0a58ba&">
-<meta name="theme-color" content="#000000"> 
-<meta charset="UTF-8">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg">
+    <meta name="theme-color" content="#000000"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King</title>
-    <!-- Link para Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
@@ -54,7 +53,6 @@
             to { border-color: white; }
         }
 
-        /* Estilo dos botões */
         .button-container {
             display: flex;
             justify-content: center;
@@ -71,6 +69,9 @@
             cursor: pointer;
             border-radius: 8px;
             transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .btn:hover {
@@ -136,56 +137,36 @@
             color: #fff;
         }
 
-        /* Estilo dos ícones nas cards */
-        .tech-icons i {
-            margin-right: 8px;
-            font-size: 20px;
+        .date-stamp {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <img class="profile-pic" src="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6779aab9&is=67785939&hm=6a03455f90d0014056c0eea03847daa9c7bc877d84f996bfbc1816ee0d0a58ba&" alt="Profile Picture">
+        <img class="profile-pic" src="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="Profile Picture">
         <h1>Hi, I'm King! Front-End</h1>
-        <!-- Botões -->
         <div class="button-container">
-            <button class="btn">Discord</button>
-            <button class="btn">Github</button>
+            <button class="btn"><i class="fab fa-discord"></i>Discord</button>
+            <button class="btn"><i class="fab fa-github"></i>Github</button>
         </div>
     </header>
 
-    <!-- Floating Menu -->
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <div class="container">
-            <div class="card">
-                <h3>💻 Tech Stack</h3>
-                <p class="tech-icons">
-                    <i class="fab fa-html5"></i> HTML & CSS
-                    <i class="fab fa-js-square"></i> JavaScript
-                    <i class="fab fa-python"></i> Python
-                    <i class="fab fa-php"></i> PHP
-                    <i class="fab fa-github"></i> Git & GitHub
-                    <i class="fab fa-node"></i> Node.js
-                    <i class="fab fa-npm"></i> NPM
-                </p>
-            </div>
-            <div class="card">
-                <h3>🎮 History</h3>
-                <p>Hello, my name is Renato. I am a developer and front-end enthusiast. I started at the end of 2023 and I am 13 years old.</p>
-            </div>
-        </div>
+        <p>Hello, my name is Renato. I am a developer and front-end enthusiast. I started at the end of 2023 and I am 13 years old.</p>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="container">
@@ -207,13 +188,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 King. All rights reserved.</p>
     </footer>
-</body>
-</html
 
-  
-       
-    
+    <div class="date-stamp">27/7/2023</div>
+</body>
+</html>
