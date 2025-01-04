@@ -54,7 +54,6 @@
             to { border-color: white; }
         }
 
-        /* Estilo dos botões */
         .button-container {
             display: flex;
             justify-content: center;
@@ -80,7 +79,6 @@
             background-color: #00cc99;
         }
 
-        /* Ícones nos botões */
         .btn i {
             font-size: 18px;
         }
@@ -154,10 +152,25 @@
             text-decoration: underline;
         }
 
-        /* Estilo dos ícones nas cards */
         .tech-icons i {
             margin-right: 8px;
             font-size: 20px;
+        }
+
+        .cv-btn {
+            background-color: #00cc99;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .cv-btn:hover {
+            background-color: #00ffcc;
         }
     </style>
 </head>
@@ -165,8 +178,7 @@
     <!-- Header -->
     <header>
         <img class="profile-pic" src="https://cdn.discordapp.com/attachments/1223648039835795494/1324854845567668315/652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg?ex=6779aab9&is=67785939&hm=6a03455f90d0014056c0eea03847daa9c7bc877d84f996bfbc1816ee0d0a58ba&" alt="Profile Picture">
-        <h1>Hi, I'm King! Front-End</h1>
-        <!-- Botões -->
+        <h1>Hi, I'm King! Front-End Developer</h1>
         <div class="button-container">
             <button class="btn">
                 <i class="fab fa-discord"></i> Discord
@@ -187,23 +199,22 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <div class="container">
-            <div class="card">
-                <h3>💻 Tech Stack</h3>
-                <p class="tech-icons">
-                    <i class="fab fa-html5"></i> HTML & CSS
-                    <i class="fab fa-js-square"></i> JavaScript
-                    <i class="fab fa-python"></i> Python
-                    <i class="fab fa-php"></i> PHP
-                    <i class="fab fa-github"></i> Git & GitHub
-                    <i class="fab fa-node"></i> Node.js
-                    <i class="fab fa-npm"></i> NPM
-                </p>
-            </div>
-            <div class="card">
-                <h3>🎮 History</h3>
-                <p>Hello, my name is Renato. I am a developer and front-end enthusiast. I started at the end of 2023 and I am 13 years old.</p>
-            </div>
+        <p>
+            Hello! My name is Renato, but you can call me King. I'm a passionate 13-year-old front-end developer who started learning programming in late 2023. I have a strong interest in designing intuitive, user-friendly web experiences. I aim to improve my skills every day and create engaging websites and applications that make a difference in the digital world.
+        </p>
+        <a href="#" class="cv-btn" download="King_CV.pdf">Download CV</a>
+
+        <div class="tech-icons">
+            <h3>💻 Tech Stack</h3>
+            <p>
+                <i class="fab fa-html5"></i> HTML & CSS
+                <i class="fab fa-js-square"></i> JavaScript
+                <i class="fab fa-python"></i> Python
+                <i class="fab fa-php"></i> PHP
+                <i class="fab fa-github"></i> Git & GitHub
+                <i class="fab fa-node"></i> Node.js
+                <i class="fab fa-npm"></i> NPM
+            </p>
         </div>
     </section>
 
