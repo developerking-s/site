@@ -18,6 +18,20 @@
             background-color: #0f0f0f;
             color: #fff;
             overflow-x: hidden;
+            position: relative;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(135deg, #0f0f0f, #111);
+            }
+            50% {
+                background: linear-gradient(135deg, #111, #0f0f0f);
+            }
+            100% {
+                background: linear-gradient(135deg, #0f0f0f, #111);
+            }
         }
 
         header {
@@ -54,7 +68,6 @@
             to { border-color: white; }
         }
 
-        /* Estilo dos botões */
         .button-container {
             display: flex;
             justify-content: center;
@@ -80,7 +93,6 @@
             background-color: #00cc99;
         }
 
-        /* Ícones nos botões */
         .btn i {
             font-size: 18px;
         }
@@ -144,7 +156,6 @@
             color: #fff;
         }
 
-        /* Estilo dos ícones nas cards */
         .tech-icons i {
             margin-right: 8px;
             font-size: 20px;
