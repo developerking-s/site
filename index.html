@@ -235,7 +235,15 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </nav>
+          function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            let themeButton = document.getElementById("themeToggle");
+            themeButton.innerHTML = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
+        }
+    </script>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    <header  
+</nav>
      <div id="termsOverlay" class="terms-overlay">
         <div class="terms-box">
             <p>Do you accept the terms and conditions?</p>
@@ -250,15 +258,6 @@
         function declineTerms() {
             alert("You must accept the terms to proceed.");
         }
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-            let themeButton = document.getElementById("themeToggle");
-            themeButton.innerHTML = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
-        }
-    </script>
-    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀️</button>
-    <header>
-
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
