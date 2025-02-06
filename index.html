@@ -1,66 +1,47 @@
-Site em Manutenção Constante ( Pode Ter Bugs )
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta property="og:title" content="King's Website">
     <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg">
-    <meta name="theme-color" content="#000000"> 
+    <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King</title>
-<link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" type="image/x-icon">
-    <!-- Link para Font Awesome -->
+    <link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* Estilos para o tema escuro */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0f0f0f;
+            background: linear-gradient(120deg, #0f0f0f, #111);
             color: #fff;
             overflow-x: hidden;
-        .light-mode {
-            background-color: white;
-            color: black;
+            transition: all 0.3s ease;
         }
-        .theme-toggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
+
+        body.light-mode {
+            background: #fff;
+            color: #111;
         }
-        .terms-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+
+        body.light-mode header {
+            background: #f9f9f9;
         }
-        .terms-box {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
+
+        body.light-mode footer {
+            background: #f9f9f9;
+            color: #111;
         }
-        .terms-btn {
-            margin: 10px;
-            padding: 10px;
-            cursor: pointer;
-            background-color: #00cc99;
-            border: none;
-            color: white;
-            border-radius: 5px;
+
+        body.light-mode .card {
+            background: rgba(0, 0, 0, 0.05);
+            color: #111;
         }
-        }
+
+        /* Outros estilos como antes... */
 
         header {
             text-align: center;
@@ -94,6 +75,22 @@ Site em Manutenção Constante ( Pode Ter Bugs )
         @keyframes blink {
             from { border-color: transparent; }
             to { border-color: white; }
+        }
+
+        .tech-icons i {
+            font-size: 30px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            display: inline-block;
+            position: relative;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .tech-icons i:hover {
+            box-shadow: 0 0 15px 5px white;
+            transform: scale(1.1);
         }
 
         .button-container {
@@ -149,17 +146,30 @@ Site em Manutenção Constante ( Pode Ter Bugs )
             color: #00ffcc;
         }
 
+        /* Novo estilo do botão para troca de tema */
+        .theme-toggle-btn {
+            cursor: pointer;
+            background: transparent;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
         section {
             margin: 60px 20px;
             text-align: center;
         }
 
-        .container {
+        .card-container {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 20px;
             flex-wrap: wrap;
-            margin-top: 20px;
         }
 
         .card {
@@ -170,6 +180,7 @@ Site em Manutenção Constante ( Pode Ter Bugs )
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
         }
 
         .card:hover {
@@ -194,11 +205,6 @@ Site em Manutenção Constante ( Pode Ter Bugs )
             text-decoration: underline;
         }
 
-        .tech-icons i {
-            margin-right: 8px;
-            font-size: 20px;
-        }
-
         .cv-btn {
             background-color: #00cc99;
             color: #fff;
@@ -214,106 +220,120 @@ Site em Manutenção Constante ( Pode Ter Bugs )
         .cv-btn:hover {
             background-color: #00ffcc;
         }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #fff;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .form-container button {
+            background-color: #00cc99;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #00ffcc;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <img class="profile-pic" src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="Profile Picture">
         <h1>Hi, I'm King! Front-End Developer</h1>
         <div class="button-container">
-            <button class="btn">
-                <i class="fab fa-discord"></i> Discord
-            </button>
-            <button class="btn">
-                <i class="fab fa-github"></i> Github
-            </button>
+            <button class="btn"><i class="fab fa-discord"></i> Discord</button>
+            <button class="btn"><i class="fab fa-github"></i> Github</button>
         </div>
     </header>
 
-    <!-- Floating Menu -->
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i>
+        </button>
     </nav>
-    <!-- About Section -->
+
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hello! My name is Renato, but you can call me King. I'm a passionate 13-year-old front-end developer who started learning programming in late 2023. I have a strong interest in designing intuitive, user-friendly web experiences. I aim to improve my skills every day and create engaging websites and applications that make a difference in the digital world.
-        </p>
-        <a href="form.htnl" class="cv-btn" download="King_CV.pdf">Download CV</a>
+        <p>Renato is a passionate front-end developer with a strong dedication to creating beautiful and functional web interfaces. His main goal is to become a highly skilled programmer who can build user-friendly and innovative digital experiences. With a focus on design and development, Renato is constantly learning and pushing himself to master new technologies in the web development world.
 
+</p>
+        <a href="form.html" class="cv-btn" download="King_CV.pdf">Download CV</a>
         <div class="tech-icons">
-            <h3></h3>
-            <p>
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-js-square"></i> 
-                <i class="fab fa-python"></i> 
-                <i class="fab fa-php"></i> 
-                <i class="fab fa-node"></i> 
-   <i class="fab fa-yarn"></i> 
-   <i class="fab fa-react"></i> 
-            </p>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-php"></i>
+            <i class="fab fa-node"></i>
+            <i class="fab fa-yarn"></i>
+            <i class="fab fa-react"></i>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="container">
+        <div class="card-container">
             <div class="card">
                 <h3>Sam Bot</h3>
-                <p>Sam Bot is your all-in-one assistant for Discord! From moderation to fun features.</p>
-                <a href="https://sam-bot.xyz" style="color: #fff; text-decoration: none; background-color: #00cc99; padding: 10px 20px; border-radius: 5px;">View Project</a>
+                <p>Sam Bot is a multifuncional applicative in discord</p>
+                <div class="button-container">
+                    <a href="https://sam-bot.xyz" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
+                    <a href="https://github.com/seu-usuario/sam-bot" class="btn"><i class="fab fa-github"></i> View Code</a>
+                </div>
             </div>
             <div class="card">
-                <h3>Magic Site</h3>
-                <p>Magic Bot offers a variety of features for dynamic and interactive Discord servers.</p>
-                <a href="https://magicbot.vercel.app" style="color: #fff; text-decoration: none; background-color: #00cc99; padding: 10px 20px; border-radius: 5px;">View Project</a>
+                <h3>Cf-Trade</h3>
+                <p>Is a site and forms from bloxfruit server 2k</p>
+                <div class="button-container">
+                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
+                    <a href="https://github.com/seu-usuario/portfolio" class="btn"><i class="fab fa-github"></i> View Code</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>CF Site</h3>
-                <p>CF Trade is one of the bloxfruit server Discord.</p>
-                <a href="https://cf-trade.vercel.app" style="color: #fff; text-decoration: none; background-color: #00cc99; padding: 10px 20px; border-radius: 5px;">View Project</a>
-            </div>
+            <!-- Continue with other projects... -->
         </div>
     </section>
-<!-- Contact Section -->
-<section id="contact" style="padding: 40px 20px; background-color: #0f0f0f; color: white; text-align: center;">
-    <h2>Contact Me</h2>
-    <p>If you have any questions or collaboration proposals, feel free to reach out!</p>
-    <form action="https://formsubmit.co/renafernandesjorge11@gmail.com" method="POST" style="max-width: 500px; margin: auto;">
-        <!-- Hidden fields for FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_next" value="https://developerking/thank-you">
 
-        <label for="name" style="display: block; margin-bottom: 8px; text-align: left;">Name:</label>
-        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px;">
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="form-container">
+            <form action="https://formsubmit.co/renafernandesjorge11@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-        <label for="email" style="display: block; margin-bottom: 8px; text-align: left;">Email:</label>
-        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px;">
-
-        <label for="message" style="display: block; margin-bottom: 8px; text-align: left;">Message:</label>
-        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px;"></textarea>
-
-        <button type="submit" style="background-color: #00cc99; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
-            Send Message
-        </button>
-    </form>
-</section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 King. All right
-s reserved.</p>
-        <p>
-            <a href="https://github.com/developerking-s" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/" target="_blank">LinkedIn</a> |
-            <a href="mailto: renafernandesjorge11@gmail.com" target="_blank">Contact Me</a>
-        </p>
+        <p>&copy; 2025 King. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
 </body>
 </html>
