@@ -20,6 +20,7 @@
             color: #fff;
             overflow-x: hidden;
             transition: all 0.3s ease;
+            position: relative; /* Necessário para o fundo animado */
         }
 
         body.light-mode {
@@ -253,9 +254,63 @@
         .form-container button:hover {
             background-color: #00ffcc;
         }
+
+        /* Fundo animado com quadrados girando */
+        .square {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: rotateSquares 10s linear infinite;
+            z-index: -1;
+        }
+
+        .square:nth-child(1) {
+            animation-duration: 8s;
+            animation-delay: 0s;
+            top: 10%;
+            left: 10%;
+        }
+
+        .square:nth-child(2) {
+            animation-duration: 12s;
+            animation-delay: 2s;
+            top: 20%;
+            left: 70%;
+        }
+
+        .square:nth-child(3) {
+            animation-duration: 15s;
+            animation-delay: 4s;
+            top: 60%;
+            left: 30%;
+        }
+
+        .square:nth-child(4) {
+            animation-duration: 18s;
+            animation-delay: 6s;
+            top: 80%;
+            left: 80%;
+        }
+
+        /* Animação de rotação */
+        @keyframes rotateSquares {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
     </style>
 </head>
 <body>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
     <header>
         <img class="profile-pic" src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="Profile Picture">
         <h1>Hi, I'm King! Front-End Developer</h1>
@@ -276,9 +331,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Renato is a passionate front-end developer with a strong dedication to creating beautiful and functional web interfaces. His main goal is to become a highly skilled programmer who can build user-friendly and innovative digital experiences. With a focus on design and development, Renato is constantly learning and pushing himself to master new technologies in the web development world.
-
-</p>
+        <p>Hello! My name is Renato, but you can call me King...</p>
         <a href="form.html" class="cv-btn" download="King_CV.pdf">Download CV</a>
         <div class="tech-icons">
             <i class="fab fa-html5"></i>
@@ -296,28 +349,27 @@
         <div class="card-container">
             <div class="card">
                 <h3>Sam Bot</h3>
-                <p>Sam Bot is a multifuncional applicative in discord</p>
+                <p>Sam Bot é o seu assistente completo para gerenciar servidores do Discord...</p>
                 <div class="button-container">
                     <a href="https://sam-bot.xyz" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
                     <a href="https://github.com/seu-usuario/sam-bot" class="btn"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
             <div class="card">
-                <h3>Cf-Trade</h3>
-                <p>Is a site and forms from bloxfruit server 2k</p>
+                <h3>Website Portfolio</h3>
+                <p>Este é meu portfólio onde exibo meus projetos...</p>
                 <div class="button-container">
                     <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
                     <a href="https://github.com/seu-usuario/portfolio" class="btn"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
-            <!-- Continue with other projects... -->
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="form-container">
-            <form action="https://formsubmit.co/renafernandesjorge11@gmail.com" method="POST">
+            <form action="https://formsubmit.co/..." method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
