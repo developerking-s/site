@@ -17,10 +17,20 @@
             color: #ffffff;
             overflow: hidden;
         }
-        h1 {
-            font-size: 4em;
+        .error-text {
+            font-size: 6em;
+            font-weight: bold;
             color: #ff4757;
-            animation: floatText 3s infinite ease-in-out;
+            text-shadow: 4px 4px 10px rgba(255, 71, 87, 0.7);
+            animation: glitch 1.5s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { transform: skewX(0deg); }
+            20% { transform: skewX(-10deg); }
+            40% { transform: skewX(10deg); }
+            60% { transform: skewX(-5deg); }
+            80% { transform: skewX(5deg); }
+            100% { transform: skewX(0deg); }
         }
         p {
             font-size: 1.5em;
@@ -42,11 +52,6 @@
         button:hover {
             background-color: #e84148;
         }
-        img {
-            width: 400px;
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -57,16 +62,10 @@
                 transform: translateY(0);
             }
         }
-        @keyframes floatText {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
-    <img src="https://source.unsplash.com/400x300/?error,404" alt="Erro 404">
-    <h1>Página Não Encontrada</h1>
+    <div class="error-text">404</div>
     <p>A página que você procura não existe.</p>
     <button onclick="voltarInicio()">Voltar para o Início</button>
 
@@ -77,4 +76,3 @@
     </script>
 </body>
 </html>
-
