@@ -15,11 +15,12 @@
             height: 100vh;
             background-color: #121212;
             color: #ffffff;
+            overflow: hidden;
         }
         h1 {
             font-size: 4em;
             color: #ff4757;
-            animation: fadeIn 1.5s ease-in-out;
+            animation: floatText 3s infinite ease-in-out;
         }
         p {
             font-size: 1.5em;
@@ -41,6 +42,11 @@
         button:hover {
             background-color: #e84148;
         }
+        img {
+            width: 300px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -51,9 +57,15 @@
                 transform: translateY(0);
             }
         }
+        @keyframes floatText {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
+    <img src="https://via.placeholder.com/300x200?text=404" alt="Erro 404">
     <h1>404 - Página Não Encontrada</h1>
     <p>A página que você procura não existe.</p>
     <button onclick="voltarInicio()">Voltar para o Início</button>
