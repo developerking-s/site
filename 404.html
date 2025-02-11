@@ -3,38 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Não Encontrada</title>
+    <title>404 - Página Não Encontrada</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f8f9fa;
+            background-color: #121212;
+            color: #ffffff;
         }
         h1 {
-            font-size: 3em;
-            color: #dc3545;
+            font-size: 4em;
+            color: #ff4757;
+            animation: fadeIn 1.5s ease-in-out;
         }
         p {
-            font-size: 1.2em;
-            color: #6c757d;
+            font-size: 1.5em;
+            color: #a4a4a4;
+            animation: fadeIn 2s ease-in-out;
         }
         button {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #007bff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff4757;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+            animation: fadeIn 2.5s ease-in-out;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #e84148;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
