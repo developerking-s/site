@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Pausa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .theme-toggle {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: #555;
+        }
+
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .light-theme .theme-toggle {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .light-theme .theme-toggle:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Estou Saindo por um Tempo</h1>
+        <p>
+            Olá a todos, decidi sair por um tempo para focar em alguns projetos pessoais e recarregar as energias. Durante esse período, vou me dedicar a alcançar alguns dos meus sonhos e objetivos que tenho guardado há algum tempo.
+        </p>
+        <p>
+            Tenho um bot chamado Sam, que tem sido uma grande ajuda em várias tarefas e projetos. Ele é mais do que um bot para mim, é uma parte importante da minha jornada.
+        </p>
+        <p>
+            Ainda tenho muitos sonhos que quero realizar, e esse tempo longe será crucial para me aproximar deles. Agradeço a todos pelo apoio e compreensão.
+        </p>
+        <button class="theme-toggle" onclick="toggleTheme()">Mudar Tema</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-theme');
+            const button = document.querySelector('.theme-toggle');
+            if (body.classList.contains('light-theme')) {
+                button.textContent = 'Mudar para Preto';
+            } else {
+                button.textContent = 'Mudar para Branco';
+            }
+        }
+    </script>
+</body>
+</html>
