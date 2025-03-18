@@ -6,12 +6,12 @@
     <title>Sam Premium Descontinuado</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
@@ -19,8 +19,8 @@
         .message-box {
             background-color: #fff;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 800px;
             width: 100%;
@@ -29,22 +29,53 @@
             color: #e74c3c;
             font-size: 36px;
             margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .intro-text {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-style: italic;
+            text-align: center;
         }
         p {
             color: #333;
             font-size: 18px;
             line-height: 1.6;
             text-align: left;
+            margin-bottom: 20px;
         }
         .highlight {
             color: #e74c3c;
             font-weight: bold;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 0;
+            color: #555;
+            font-size: 16px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="message-box">
         <h1>Sam Premium Descontinuado</h1>
+        <div class="intro-text">
+            "Agradecemos a todos os utilizadores que fizeram parte desta jornada. O Sam Premium foi uma experiência incrível, mas chegou o momento de seguir em frente."
+        </div>
         <p>
             É com pesar que informamos que o serviço <span class="highlight">Sam Premium</span> foi oficialmente descontinuado. Após anos de dedicação e inovação, tomámos a difícil decisão de encerrar este serviço. Gostaríamos de expressar a nossa mais profunda gratidão a todos os utilizadores que nos apoiaram ao longo desta jornada.
         </p>
@@ -54,16 +85,14 @@
         <p>
             Para os utilizadores atuais, garantimos que todos os dados associados ao <span class="highlight">Sam Premium</span> serão mantidos em segurança e estarão disponíveis para exportação até <span class="highlight">31 de Dezembro de 2025</span>. Após esta data, os dados serão permanentemente eliminados dos nossos servidores.
         </p>
-        <p>
-            Se tiver alguma dúvida ou precisar de assistência, a nossa equipa de suporte ao cliente está disponível para ajudar. Pode contactar-nos através do email <span class="highlight">suporte@sam.com</span> ou pelo telefone <span class="highlight">+351 123 456 789</span>.
-        </p>
+        </div>
         <p>
             Mais uma vez, agradecemos todo o apoio e compreensão. Continuamos comprometidos em oferecer soluções inovadoras e de qualidade, e esperamos poder contar consigo nas nossas futuras iniciativas.
         </p>
-        <p>
+        <div class="footer">
             Atenciosamente,<br>
-            A Equipa Sam
-        </p>
+            A Equipa Samzinho
+        </div>
     </div>
 </body>
 </html>
