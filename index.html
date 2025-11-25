@@ -1,408 +1,384 @@
-Este site não é usado mais nem atualizado 🛑
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-       <meta property="og:title" content="Sitezin do King">
-    <meta property="og:description" content="Saiba mais sobre o developer king um developer, designer e escritor veja o meu site soft.">
+    <meta property="og:title" content="King's Website">
+    <meta property="og:description" content="Check out my Portfolio! Learn more About Me! I am King, a developer student & designer.">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg">
-    <meta name="theme-color" content="">
-    <link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" type="image/x-icon" 
-<meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King - Jornada Criativa em Desenvolvimento</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <title>King</title>
+    <link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --bg-primary: #FFF0E6;
-            --text-primary: #5D4037;
-            --accent-color: #D2B48C;
-            --secondary-color: #F5E6D3;
-            --soft-white: #FFFAF0;
-            --menu-bg: #E6D2B4;
-        }
-
-        * {
+        /* Estilos para o tema escuro */
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        @keyframes bubble-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        @keyframes rotate-menu {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
-            100% { transform: rotate(0deg); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            background: linear-gradient(120deg, #0f0f0f, #111);
+            color: #fff;
             overflow-x: hidden;
-        }
-
-        .cosmic-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .menu-toggle {
-            width: 60px;
-            height: 60px;
-            background-color: var(--menu-bg);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background-color: var(--text-primary);
-            margin: 3px 0;
             transition: all 0.3s ease;
         }
 
-        .menu-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
+        body.light-mode {
+            background: #fff;
+            color: #111;
         }
 
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
+        body.light-mode header {
+            background: #f9f9f9;
         }
 
-        .menu-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+        body.light-mode footer {
+            background: #f9f9f9;
+            color: #111;
         }
 
-        .menu-content {
-            position: fixed;
-            top: 100px;
-            right: -300px;
-            width: 250px;
-            background-color: var(--menu-bg);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: -10px 10px 20px rgba(0,0,0,0.1);
-            transition: right 0.4s ease;
-            z-index: 999;
+        body.light-mode .card {
+            background: rgba(0, 0, 0, 0.05);
+            color: #111;
         }
 
-        .menu-content.active {
-            right: 20px;
-            animation: rotate-menu 0.5s ease;
+        /* Outros estilos como antes... */
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f0f0f, #111);
         }
 
-        .menu-content a {
-            display: block;
-            color: var(--text-primary);
-            text-decoration: none;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .menu-content a:hover {
-            background-color: var(--accent-color);
-            transform: translateX(10px);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 0;
-            position: relative;
-        }
-
-        .bubble {
-            position: absolute;
-            background-color: rgba(210, 180, 140, 0.2);
+        header .profile-pic {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            animation: bubble-float 6s infinite alternate;
+            border: 4px solid #fff;
+            margin: 0 auto;
         }
 
-        .hero {
+        header h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            animation: typing 3.5s steps(30, end), blink 0.7s step-end infinite;
+            max-width: 100%;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from { border-color: transparent; }
+            to { border-color: white; }
+        }
+
+        .tech-icons i {
+            font-size: 30px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            display: inline-block;
+            position: relative;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .tech-icons i:hover {
+            box-shadow: 0 0 15px 5px white;
+            transform: scale(1.1);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #00ffcc;
+            color: #111;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
             display: flex;
             align-items: center;
-            margin-top: 4rem;
-            background-color: var(--soft-white);
-            padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00cc99;
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #000;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        /* Novo estilo do botão para troca de tema */
+        .theme-toggle-btn {
+            cursor: pointer;
+            background: transparent;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 60px 20px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #111;
+            color: #fff;
             position: relative;
             overflow: hidden;
         }
 
-        .hero-content {
-            flex: 1;
-            z-index: 10;
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        footer .footer-link {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
             position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            transition: color 0.3s, transform 0.3s;
         }
 
-        .hero h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 3rem;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
+        footer .footer-link:hover {
+            color: #fff;
+            transform: scale(1.1);
         }
 
-        .journey-section {
-            background-color: var(--secondary-color);
-            border-radius: 30px;
-            padding: 3rem;
-            margin-top: 4rem;
-            position: relative;
-        }
-
-        .journey-timeline {
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .journey-item {
-            position: relative;
-            padding: 20px;
-            background-color: var(--soft-white);
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .journey-item::before {
+        footer .footer-link::before {
             content: '';
             position: absolute;
-            left: -50px;
-            top: 10px;
-            width: 30px;
-            height: 30px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-        }
-
-        .skills-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-
-        .skill-bubble {
-            background-color: var(--soft-white);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00ffcc;
+            transform: scaleX(0);
+            transform-origin: bottom right;
             transition: transform 0.3s ease;
         }
 
-        .skill-bubble:hover {
-            transform: scale(1.05);
+        footer .footer-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
 
-        .project-section {
-            background-color: var(--secondary-color);
-            border-radius: 30px;
-            padding: 3rem;
-            margin-top: 4rem;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: var(--soft-white);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-
-        .cta-section {
-            background-color: var(--accent-color);
-            color: var(--soft-white);
-            text-align: center;
-            padding: 3rem;
-            border-radius: 30px;
-            margin-top: 4rem;
-        }
-
-        .footer {
-            background-color: var(--menu-bg);
-            padding: 2rem;
-            text-align: center;
-            border-radius: 30px 30px 0 0;
-            margin-top: 4rem;
-        }
-
-        .social-links a {
-            color: var(--text-primary);
-            margin: 0 15px;
+        .cv-btn {
+            background-color: #00cc99;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
         }
 
-        .social-links a:hover {
-            transform: scale(1.2) rotate(360deg);
+        .cv-btn:hover {
+            background-color: #00ffcc;
         }
 
-        @media (max-width: 768px) {
-            .hero, .journey-section, .project-section, .cta-section {
-                padding: 2rem;
-            }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #fff;
+            border-radius: 8px;
+            color: #fff;
+        }
 
-            .menu-content {
-                width: calc(100% - 40px);
-                right: -100%;
-            }
+        .form-container button {
+            background-color: #00cc99;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-            .menu-content.active {
-                right: 20px;
-            }
+        .form-container button:hover {
+            background-color: #00ffcc;
         }
     </style>
 </head>
 <body>
-    <div class="cosmic-menu">
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header>
+        <img class="profile-pic" src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="Profile Picture">
+        <h1>Hi, I'm King! Front-End</h1>
+        <div class="button-container">
+            <button class="btn"><i class="fab fa-discord"></i> Discord</button>
+            <button class="btn"><i class="fab fa-github"></i> Github</button>
         </div>
-        <div class="menu-content">
-            <a href="#home">🏠 Home</a>
-            <a href="#jornada">🚀 Minha Jornada</a>
-            <a href="#habilidades">💡 Habilidades</a>
-            <a href="#projetos">🖥️ Projetos</a>
-            <a href="#contato">📞 Contato</a>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Renato is a passionate front-end developer with a strong dedication to creating beautiful and functional web interfaces. His main goal is to become a highly skilled programmer who can build user-friendly and innovative digital experiences. With a focus on design and development, Renato is constantly learning and pushing himself to master new technologies in the web development world.</p>
+        <a href="form.html" class="cv-btn" download="King_CV.pdf">Download CV</a>
+        <div class="tech-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-php"></i>
+            <i class="fab fa-node"></i>
+            <i class="fab fa-yarn"></i>
+            <i class="fab fa-react"></i>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="bubble" style="width: 200px; height: 200px; top: 50px; left: -100px;"></div>
-        <div class="bubble" style="width: 300px; height: 300px; bottom: 100px; right: -150px;"></div>
-
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>King, o Desenvolvedor Mágico! 🧙‍♂️</h1>
-                <p>Transformando linhas de código em experiências incríveis. Combinando tecnologia com criatividade para criar soluções que contam histórias.</p>
-                <a href="#contato" class="cta-button" style="display: inline-block; background-color: var(--text-primary); color: var(--soft-white); padding: 12px 24px; text-decoration: none; border-radius: 30px; margin-top: 20px;">Vamos Criar Algo Incrível!</a>
-            </div>
-            <div class="hero-image" style="flex: 1; text-align: center;">
-                <img src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/0652c0661-5c19-490e-9d25-74ab1f1d81f6.jpg" alt="King - Desenvolvedor" style="max-width: 300px; border-radius: 50%; box-shadow: 0 15px 30px rgba(0,0,0,0.2);">
-            </div>
-        </section>
-
-        <section id="jornada" class="journey-section">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Caveat', cursive; font-size: 2.5rem;">Minha Jornada Tecnológica</h2>
-            <div class="journey-timeline">
-                <div class="journey-item">
-                    <h3>🎓 Início da Aventura</h3>
-                    <p>Graduação em Ciência da Computação, descobrindo o mundo da programação e se apaixonando por código.</p>
-                </div>
-                <div class="journey-item">
-                    <h3>💼 Primeiros Passos Profissionais</h3>
-                    <p>Estágio em startup de tecnologia, onde aprendi a importância da inovação e trabalho em equipe.</p>
-                </div>
-                <div class="journey-item">
-                    <h3>🚀 Desenvolvedor Pleno</h3>
-                    <p>Trabalho atual desenvolvendo soluções web complexas e escaláveis para clientes globais.</p>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Sam Bot</h3>
+                <p>Sam Bot is a multifuncional applicative in discord</p>
+                <div class="button-container">
+                    <a href="https://sam-bot.xyz" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
+                    <a href="https://github.com/seu-usuario/sam-bot" class="btn"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
-        </section>
-
-        <section id="habilidades" class="skills-showcase">
-            <div class="skill-bubble">
-                <h3>🖥️ Desenvolvimento Frontend</h3>
-                <p>React, Vue.js, Angular<br>Design Responsivo<br>Animações & Interatividade</p>
-            </div>
-            <div class="skill-bubble">
-                <h3>⚙️ Desenvolvimento Backend</h3>
-                <p>Node.js, Python, Java<br>Arquitetura de Microsserviços<br>API Design</p>
-            </div>
-            <div class="skill-bubble">
-                <h3>🗃️ Banco de Dados</h3>
-                <p>MongoDB, PostgreSQL<br>Modelagem de Dados<br>Otimização de Consultas</p>
-            </div>
-            <div class="skill-bubble">
-                <h3>🚀 DevOps & Cloud</h3>
-                <p>Docker, Kubernetes<br>AWS, Azure<br>CI/CD Pipelines</p>
-            </div>
-        </section>
-
-        <section id="projetos" class="project-section">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Caveat', cursive; font-size: 2.5rem;">Projetos Criativos</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>🌐 Plataforma de E-learning</h3>
-                    <p>Aplicação web completa com sistema de cursos online, gamificação e análise de progresso.</p>
-                </div>
-                <div class="project-card">
-                    <h3>📱 App de Produtividade</h3>
-                    <p>Aplicativo móvel para gerenciamento de tarefas com inteligência artificial de recomendação.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🤖 Sistema de Automação</h3>
-                    <p>Solução empresarial de automação de processos utilizando machine learning.</p>
+            <div class="card">
+                <h3>Cf-Trade</h3>
+                <p>Is a site and forms from bloxfruit server 2k</p>
+                <div class="button-container">
+                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
+                    <a href="https://github.com/seu-usuario/portfolio" class="btn"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
-        </section>
-
-        <section class="cta-section">
-            <h2>Vamos Transformar Ideias em Realidade?</h2>
-            <p>Cada projeto é uma nova aventura. Estou pronto para dar vida à sua próxima grande ideia!</p>
-            <a href="#contato" style="display: inline-block; background-color: var(--soft-white); color: var(--text-primary); padding: 15px 30px; text-decoration: none; border-radius: 30px; margin-top: 20px; font-weight: bold;">Entre em Contato</a>
-        </section>
-
-        <footer class="footer">
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Email</a>
+            <div class="card">
+                <h3>Save Pets</h3>
+                <p>Is a site from save pets</p>
+                <div class="button-container">
+                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Site</a>
+                    <a href="https://github.com/seu-usuario/portfolio" class="btn"><i class="fab fa-github"></i> View Code</a>
+                </div>
             </div>
-            <p style="margin-top: 1rem;">© 2024 King - Desenvolvendo Sonhos 💻✨</p>
-        </footer>
-    </div>
+            <!-- Continue with other projects... -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="form-container">
+            <form action="https://formsubmit.co/renafernandesjorge11@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 King. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#about" class="footer-link">About Me</a>
+            <a href="#projects" class="footer-link">Projects</a>
+            <a href="https://github.com/seu-usuario" class="footer-link">GitHub</a>
+            <a href="mailto:renafernandesjorge11@gmail.com" class="footer-link">Contact</a>
+        </div>
+    </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.menu-content').classList.toggle('active');
-        });
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
     </script>
 </body>
 </html>
