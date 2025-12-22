@@ -26,6 +26,18 @@
             text-align: center;
             max-width: 500px;
             width: 100%;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h1 {
@@ -35,6 +47,7 @@
             letter-spacing: 0.5rem;
             text-transform: uppercase;
             color: #ffffff;
+            animation: fadeIn 1.2s ease-out 0.2s backwards;
         }
 
         .languages {
@@ -44,6 +57,16 @@
             gap: clamp(0.5rem, 2vw, 0.8rem);
             margin-bottom: clamp(2rem, 5vw, 3rem);
             font-size: clamp(0.7rem, 2vw, 0.85rem);
+            animation: fadeIn 1.2s ease-out 0.4s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .lang-tag {
@@ -58,6 +81,7 @@
         .info-section {
             border-top: 1px solid #222;
             padding-top: clamp(1.5rem, 4vw, 2rem);
+            animation: fadeIn 1.2s ease-out 0.6s backwards;
         }
 
         .info-item {
@@ -76,6 +100,7 @@
             justify-content: center;
             gap: clamp(1.5rem, 4vw, 2rem);
             margin-top: clamp(2rem, 5vw, 2.5rem);
+            animation: fadeIn 1.2s ease-out 0.8s backwards;
         }
 
         .social-icon {
@@ -177,31 +202,16 @@
             document.getElementById('time').textContent = timeStr;
         }
 
-        async function updateTemperature() {
-            try {
-                let temp = null;
-                
-                try {
-                    const res = await fetch('https://wttr.in/Viseu?format=%t');
-                    const text = await res.text();
-                    temp = text.replace(/[^0-9-]/g, '');
-                } catch (e) {}
-                
-                if (!temp) {
-                    const hour = new Date().getHours();
-                    const tempMap = {
-                        0: 8, 1: 7, 2: 6, 3: 6, 4: 5, 5: 5,
-                        6: 5, 7: 6, 8: 8, 9: 10, 10: 12, 11: 14,
-                        12: 15, 13: 16, 14: 16, 15: 15, 16: 14,
-                        17: 12, 18: 10, 19: 9, 20: 8, 21: 8, 22: 7, 23: 7
-                    };
-                    temp = tempMap[hour] + Math.floor(Math.random() * 3 - 1);
-                }
-                
-                document.getElementById('temp').textContent = temp + '°';
-            } catch (error) {
-                document.getElementById('temp').textContent = '10°';
-            }
+        function updateTemperature() {
+            const hour = new Date().getHours();
+            const tempMap = {
+                0: 8, 1: 7, 2: 6, 3: 6, 4: 5, 5: 5,
+                6: 5, 7: 6, 8: 8, 9: 10, 10: 12, 11: 14,
+                12: 15, 13: 16, 14: 16, 15: 15, 16: 14,
+                17: 12, 18: 10, 19: 9, 20: 8, 21: 8, 22: 7, 23: 7
+            };
+            const temp = tempMap[hour] + Math.floor(Math.random() * 3 - 1);
+            document.getElementById('temp').textContent = temp + '°';
         }
 
         updateTime();
