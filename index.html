@@ -20,6 +20,32 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+            animation: moveLights 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes moveLights {
+            0%, 100% {
+                background-position: 0% 50%, 100% 50%;
+            }
+            50% {
+                background-position: 100% 50%, 0% 50%;
+            }
         }
 
         .container {
@@ -27,6 +53,8 @@
             max-width: 500px;
             width: 100%;
             animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         @keyframes fadeInUp {
@@ -113,6 +141,7 @@
             border-radius: 50%;
             transition: all 0.3s ease;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .social-icon:hover {
@@ -218,14 +247,12 @@
         updateTemperature();
         setInterval(updateTime, 1000);
         setInterval(updateTemperature, 600000);
+
+        console.clear();
+        console.log(
+            "%cMENSAGEM:\n\nSe estás a ver isto, és curioso.\nCódigo é feito para ser lido, não copiado.\n\nBoa sorte 😉",
+            "color: #00aaff; font-size: 16px; font-family: monospace; font-weight: bold;"
+        );
     </script>
 </body>
 </html>
-<script>
-    console.clear();
-    console.log(
-        "%cMENSAGEN:\n\nSe estás a ver isto, és curioso.\nCódigo é feito para ser lido, não copiado.\n\nBoa sorte 😉",
-        "color: #00aaff; font-size: 16px; font-family: monospace; font-weight: bold;"
-    );
-</script>
-
